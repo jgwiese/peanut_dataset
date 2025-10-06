@@ -1,0 +1,5 @@
+outs:
+- md5: 5535ffdf13541d23162e4729a5c3d58d
+  size: 458661
+  hash: md5
+  path: 0020_image.png
