@@ -1,0 +1,5 @@
+outs:
+- md5: cef38a2d7e73a95a0a2562ebdb61d79b
+  size: 4995
+  hash: md5
+  path: 0008_mask.png
