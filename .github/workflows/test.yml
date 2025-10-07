@@ -7,6 +7,14 @@ on:
     branches: [ main ]
 
 jobs:
+  training:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: run training container
+        run: |
+          docker run paraficial/peanut_ml:latest
+
   test:
     runs-on: ubuntu-latest
 
