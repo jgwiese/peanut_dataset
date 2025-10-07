@@ -11,9 +11,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: clone dataset repo
+        run: |
+          git clone https://github.com/jgwiese/peanut_dataset.git
+          cd peanut_dataset
+          git checkout main
+          pip install dvc dvc-s3
+          dvc pull data/processed
       - name: run training container
         run: |
-          docker run paraficial/peanut_ml:latest
+          docker run -v ${{ github.workspace }}/peanut_dataset/data/processed:/app/data paraficial/peanut_ml:latest
 
   test:
     runs-on: ubuntu-latest
