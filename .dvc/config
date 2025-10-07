@@ -1,4 +1,6 @@
 [core]
-    remote = localremote
+    remote = s3remote
 ['remote "localremote"']
     url = /home/gw/data/dvcstore
+['remote "s3remote"']
+    url = s3://peanut-dataset
